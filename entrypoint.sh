@@ -27,22 +27,22 @@ iptables -A INPUT -i eth0 -p tcp --dport 1723 -j ACCEPT
 iptables -A INPUT -i eth0 -p gre -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 
-# OCT_2="${MAIN_OCTET:-10.1}"
+OCT_2="${MAIN_OCTET:-10.1}"
 
-# for i in {2..254}; do
+for i in {2..254}; do
 
-#     redir -s :$((i + 10000)) $OCT_2.0.$i:8728
-#     redir -s :$((i + 20000)) $OCT_2.0.$i:8291
+    redir -s :$((i + 10000)) $OCT_2.0.$i:8728
+    redir -s :$((i + 20000)) $OCT_2.0.$i:8291
 
-#     redir -s :$((i + 10000)) $OCT_2.1.$i:8728
-#     redir -s :$((i + 20000)) $OCT_2.1.$i:8291
+    redir -s :$((i + 10000)) $OCT_2.1.$i:8728
+    redir -s :$((i + 20000)) $OCT_2.1.$i:8291
 
-#     redir -s :$((i + 10000)) $OCT_2.2.$i:8728
-#     redir -s :$((i + 20000)) $OCT_2.2.$i:8291
+    redir -s :$((i + 10000)) $OCT_2.2.$i:8728
+    redir -s :$((i + 20000)) $OCT_2.2.$i:8291
 
-#     redir -s :$((i + 10000)) $OCT_2.3.$i:8728
-#     redir -s :$((i + 20000)) $OCT_2.3.$i:8291
-# done
+    redir -s :$((i + 10000)) $OCT_2.3.$i:8728
+    redir -s :$((i + 20000)) $OCT_2.3.$i:8291
+done
 
 echo "export WASP_ENDPOINT=${WASP_ENDPOINT}" >> "/opt/envs.sh"
 echo "export OCT_2=${OCT_2}" >> "/opt/envs.sh"

@@ -28,7 +28,17 @@ chap-secrets:
 #username server password ip
 waspnet * waspnet *
 ```
-
 Change chap-secrets with your username and password.
+
+Mikrotik Remote Access
+
+Get the last Octec of your Local IP then add 10000 for API and 20000 for Winbox
+
+```
+Example:
+Your local ip is 10.1.0.2 get the last octet which is "2" then add 20000, your remote access url or ip is <public-ip>:20002 to access your winbox.
+
+Where <public-ip> is your server public ip
+```
 
 -This Project is a Part of WASP RADIUS (All in One Hotspot & PPPoE System)

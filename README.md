@@ -32,7 +32,7 @@ Change chap-secrets with your username and password.
 
 Mikrotik Remote Access
 
-Get the last Octec of your Local IP then add 10000 for API and 20000 for Winbox
+Get the last Octet of your Local IP then add 10000 for API and 20000 for Winbox
 
 ```
 Example:
